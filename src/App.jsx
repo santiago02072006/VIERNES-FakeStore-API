@@ -9,7 +9,7 @@ import Lista from './componentes/lista'
 import Comparador from './componentes/comparador'
 import Comprado from './componentes/comprado'
 import Usuarios from './componentes/usuarios'
-import Productos from './componentes/productos'
+import Producto from './componentes/producto'
 import Aleatorio from './componentes/aleatorio'
 import Favorito from './componentes/favorito'
 
@@ -25,15 +25,15 @@ function App() {
     <Router>
       <Menu/>
       <Routes>
-        <Route path="/" element ={<Lista/>}/>
-        <Route path="/usuarios" element ={<Usuarios/>}/>
-        <Route path="/favorito" element ={<Favorito/>}/>
-        <Route path="/aleatorio" element ={<Aleatorio/>}/>
-        <Route path="/comparador" element ={<Comparador/>}/>
-        <Route path="/comprados" element ={<Comprado/>}/>
-        <Route path="/productos" element ={<Productos/>}/>
-
+      <Route path="/" element={<Lista />} />
+      <Route path="/usuarios" element={<Usuarios />} />
+      <Route path="/favorito" element={<Favorito />} />
+      <Route path="/aleatorio" element={<Aleatorio />} />
+      <Route path="/comparador" element={<Comparador />} />
+      <Route path="/comprados" element={<Comprado />} />
+      <Route path="/producto/:id" element={<Producto />} /> 
       </Routes>
+
     </Router>
   );
 }

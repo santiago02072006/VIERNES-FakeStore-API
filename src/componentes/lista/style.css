@@ -1,0 +1,67 @@
+/* Estilo general para el buscador */
+.c-buscador {
+    width: 100%;
+    padding: 10px;
+    margin: 20px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    box-sizing: border-box;
+  }
+  
+  /* Contenedor de la lista de productos */
+  .c-lista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+    margin: 20px 0;
+  }
+  
+  /* Estilo para cada producto en la lista */
+  .c-lista-producto {
+    width: calc(33.33% - 20px); /* Tres productos por fila */
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .c-lista-producto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .c-lista-producto img {
+    width: 100%;
+    max-height: 150px;
+    object-fit: contain;
+    border-radius: 5px;
+  }
+  
+  .c-lista-producto p {
+    text-align: center;
+    margin: 5px 0;
+    font-size: 14px;
+  }
+  
+  .c-lista-producto p:nth-child(2) {
+    font-weight: bold;
+    font-size: 16px;
+  }
+  
+  /* Ajuste para pantallas más pequeñas */
+  @media (max-width: 768px) {
+    .c-lista-producto {
+      width: calc(50% - 20px); /* Dos productos por fila */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .c-lista-producto {
+      width: 100%; /* Un producto por fila */
+    }
+  }
+  

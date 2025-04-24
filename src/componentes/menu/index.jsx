@@ -10,7 +10,7 @@ function Menu() {
                 <Link to="/aleatorio">Aleatorios</Link>
                 <Link to="/comparador">Comparador</Link>
                 <Link to="/comprados">Comprados</Link>
-                <Link to="/productos">Productos</Link>
+                <Link to="/producto">Productos</Link>
                 <Link to="/usuarios">Usuarios</Link>
             </nav>
         </>

@@ -1,0 +1,83 @@
+/* Estilo para el contenedor principal del producto */
+.producto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .producto img {
+    width: 200px;
+    height: auto;
+    border-radius: 5px;
+    object-fit: contain;
+    margin-bottom: 20px;
+  }
+  
+  .producto h2 {
+    font-size: 24px;
+    margin: 10px 0;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .producto p {
+    font-size: 16px;
+    color: #666;
+    margin: 10px 0;
+  }
+  
+  .producto p strong {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Estilo para el botón de favoritos */
+  .producto button {
+    padding: 10px 20px;
+    background-color: #ff6f61;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 20px;
+  }
+  
+  .producto button:hover {
+    background-color: #e04e43;
+    transform: scale(1.05);
+  }
+  
+  .producto button:focus {
+    outline: none;
+  }
+  
+  /* Estilo responsivo para pantallas pequeñas */
+  @media (max-width: 768px) {
+    .producto {
+      padding: 15px;
+      max-width: 90%;
+    }
+  
+    .producto img {
+      width: 150px;
+    }
+  
+    .producto h2 {
+      font-size: 20px;
+    }
+  
+    .producto p {
+      font-size: 14px;
+    }
+  }
+  
