@@ -1,0 +1,81 @@
+/* Login.css */
+.login-container {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 30px 25px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+.login-container h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-weight: 700;
+  color: #1e293b; /* azul oscuro */
+}
+
+.login-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-container input[type="email"],
+.login-container input[type="password"] {
+  padding: 12px 15px;
+  margin-bottom: 18px;
+  border: 1.8px solid #cbd5e1; /* gris claro */
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.login-container input[type="email"]:focus,
+.login-container input[type="password"]:focus {
+  border-color: #2563eb; /* azul vibrante */
+  outline: none;
+  box-shadow: 0 0 6px #2563ebaa;
+}
+
+.login-container button[type="submit"] {
+  background: #2563eb;
+  color: #fff;
+  padding: 12px 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.login-container button[type="submit"]:hover {
+  background: #1e40af; /* azul más oscuro */
+}
+
+.login-container .register-section {
+  margin-top: 25px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #475569;
+}
+
+.login-container .register-section p {
+  margin-bottom: 10px;
+}
+
+.login-container .register-section button {
+  background: transparent;
+  border: none;
+  color: #2563eb;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.login-container .register-section button:hover {
+  color: #1e40af;
+}

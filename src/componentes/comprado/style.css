@@ -1,0 +1,62 @@
+/* styles.css */
+.comprados-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  padding: 1.5rem 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+.comprados-container h2 {
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.comprados-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.comprados-list li {
+  background: #f9f9f9;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.comprados-list li:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(44, 62, 80, 0.15);
+}
+
+.comprados-list strong {
+  font-weight: 600;
+  color: #2980b9;
+  font-size: 1.1rem;
+}
+
+.comprados-list hr {
+  margin-top: 1rem;
+  border: none;
+  border-top: 1px solid #ddd;
+  opacity: 0.4;
+}
+
+.no-products {
+  font-style: italic;
+  text-align: center;
+  color: #777;
+  margin-top: 2rem;
+  font-size: 1rem;
+}

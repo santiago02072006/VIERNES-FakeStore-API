@@ -1,0 +1,138 @@
+.usuario-container {
+  max-width: 700px;
+  margin: 2rem auto;
+  background: #fff;
+  padding: 2rem 2.5rem;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2c3e50;
+}
+
+.usuario-container h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #34495e;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.usuario-container label {
+  display: block;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #34495e;
+}
+
+.usuario-container input[type="text"],
+.usuario-container input[type="date"],
+.usuario-container input:not([type="button"]) {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  border: 1.8px solid #bdc3c7;
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+  margin-top: 0.3rem;
+  box-sizing: border-box;
+}
+
+.usuario-container input[type="text"]:focus,
+.usuario-container input[type="date"]:focus,
+.usuario-container input:not([type="button"]):focus {
+  border-color: #2980b9;
+  outline: none;
+  box-shadow: 0 0 6px rgba(41, 128, 185, 0.4);
+}
+
+.usuario-container button {
+  background-color: #2980b9;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 0.65rem 1.5rem;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+
+.usuario-container button:hover {
+  background-color: #1c5980;
+}
+
+.usuario-container hr {
+  margin: 2rem 0;
+  border: none;
+  border-top: 1px solid #ecf0f1;
+}
+
+.usuario-container h3 {
+  margin-top: 1.5rem;
+  font-weight: 700;
+  color: #34495e;
+  font-size: 1.4rem;
+}
+
+.usuario-container ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.usuario-container ul li {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 0.5rem;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.07);
+  width: 150px;
+  text-align: center;
+  position: relative;
+}
+
+.usuario-container ul li img {
+  border-radius: 10px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 0.5rem auto;
+  object-fit: cover;
+}
+
+.usuario-container ul li button {
+  background-color: #e74c3c;
+  padding: 0.3rem 0.8rem;
+  font-size: 0.85rem;
+  border-radius: 8px;
+  margin-top: 0;
+  transition: background-color 0.3s ease;
+}
+
+.usuario-container ul li button:hover {
+  background-color: #c0392b;
+}
+
+.usuario-container .logout-section {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.usuario-container .logout-section button {
+  padding: 0.85rem 2rem;
+  font-size: 1.1rem;
+  border-radius: 14px;
+  background-color: #e67e22;
+  transition: background-color 0.3s ease;
+}
+
+.usuario-container .logout-section button:hover {
+  background-color: #d35400;
+}

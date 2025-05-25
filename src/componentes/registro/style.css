@@ -1,0 +1,80 @@
+.registro-container {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 20px 25px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.registro-container h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+.registro-container form input {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 15px;
+  border: 1.8px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.registro-container form input:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 5px #3498db;
+}
+
+.registro-container form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #3498db;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.registro-container form button:hover {
+  background-color: #2980b9;
+}
+
+.registro-error {
+  color: #e74c3c;
+  margin-top: 10px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.registro-login {
+  margin-top: 25px;
+  text-align: center;
+  color: #555;
+}
+
+.registro-login p {
+  margin-bottom: 10px;
+}
+
+.registro-login button {
+  background-color: #2ecc71;
+  border: none;
+  padding: 10px 18px;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.registro-login button:hover {
+  background-color: #27ae60;
+}

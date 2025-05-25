@@ -1,0 +1,118 @@
+/* style.css */
+
+.admin-container {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 20px 30px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #1f2937; /* gris oscuro */
+}
+
+.admin-container h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-weight: 700;
+  color: #2563eb; /* azul */
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.admin-table thead tr {
+  background-color: #e0e7ff; /* azul claro */
+  color: #1e40af; /* azul oscuro */
+}
+
+.admin-table th,
+.admin-table td {
+  padding: 12px 15px;
+  border: 1px solid #cbd5e1; /* gris claro */
+  text-align: center;
+  vertical-align: middle;
+}
+
+.admin-table tbody tr:nth-child(even) {
+  background-color: #f9fafb;
+}
+
+.input-edit {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1.6px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.25s ease;
+}
+
+.input-edit:focus {
+  border-color: #2563eb;
+  outline: none;
+  box-shadow: 0 0 5px #2563ebaa;
+}
+
+.fotos-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.foto-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 110px;
+}
+
+.foto-img {
+  width: 100px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 6px;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 0.15);
+}
+
+.btn-eliminar {
+  background-color: #ef4444; /* rojo */
+  border: none;
+  color: white;
+  padding: 6px 10px;
+  font-size: 0.85rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-eliminar:hover {
+  background-color: #b91c1c;
+}
+
+.btn-guardar {
+  background-color: #2563eb; /* azul */
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-guardar:hover {
+  background-color: #1e40af;
+}
+
+.loading {
+  text-align: center;
+  margin-top: 100px;
+  font-size: 1.4rem;
+  color: #2563eb;
+}

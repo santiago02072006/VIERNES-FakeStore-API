@@ -1,31 +1,18 @@
-import { useState, useEffect } from 'react';
+import { useState, useContext } from 'react';
 import { useNavigate } from "react-router-dom";
+import { AppContext } from '../../contexto/contexto';
 import Filtro from '../filtro';
 import './style.css';
 
-function Listas() {
-  const [data, setData] = useState([]);
-  const [busqueda, setBusqueda] = useState('');
+function Lista() {
   const navigate = useNavigate();
-  const [categoriaSeleccionada, setCategoriaSeleccionada] = useState('All');
+  const [busqueda, setBusqueda] = useState('');
 
-  useEffect(() => {
-    const obtenerProductos = async () => {
-      try {
-        const url = categoriaSeleccionada === 'All'
-          ? 'https://fakestoreapi.com/products'
-          : `https://fakestoreapi.com/products/category/${encodeURIComponent(categoriaSeleccionada)}`;
-
-        const res = await fetch(url);
-        const productos = await res.json();
-        setData(productos);
-      } catch (error) {
-        console.error("Error al obtener productos:", error);
-      }
-    };
-
-    obtenerProductos();
-  }, [categoriaSeleccionada]);
+  const {
+    data,
+    categoriaSeleccionada,
+    setCategoriaSeleccionada
+  } = useContext(AppContext);
 
   const handleCategoriaChange = (categoria) => {
     setCategoriaSeleccionada(categoria);
@@ -33,9 +20,24 @@ function Listas() {
 
   let resultados = data;
 
-  if (busqueda.length >= 3) {
-    resultados = data.filter(products =>
-      products.title.toLowerCase().includes(busqueda.toLowerCase())
+  // Filtro por título
+  if (busqueda.length >= 3 && isNaN(busqueda)) {
+    resultados = data.filter(product =>
+      product.title.toLowerCase().includes(busqueda.toLowerCase())
+    );
+  }
+
+  // Filtro por ID numérico
+  if (!isNaN(busqueda) && busqueda !== '') {
+    resultados = data.filter(product =>
+      product.id.toString() === busqueda
+    );
+  }
+
+  // Filtro por categoría (si no es "All")
+  if (categoriaSeleccionada && categoriaSeleccionada !== 'All') {
+    resultados = resultados.filter(product =>
+      product.category === categoriaSeleccionada
     );
   }
 
@@ -49,25 +51,28 @@ function Listas() {
         className="c-buscador"
       />
 
-      <Filtro onCategoriaChange={handleCategoriaChange} />
+      {/* ✅ Aquí pasamos la categoría seleccionada */}
+      <Filtro 
+        onCategoriaChange={handleCategoriaChange}
+        categoriaSeleccionada={categoriaSeleccionada}
+      />
 
       <section className='c-lista'>
-        {resultados.map((products) => (
+        {resultados.map(product => (
           <div
-            className='c-lista-producto'
-            key={products.id}
-            onClick={() => navigate(`/producto/${products.id}`)}
+            className='c-lista-pokemon'
+            key={product.id}
+            onClick={() => navigate(`/producto/${product.id}`)}
           >
-            <p>ID: {products.id}</p>
+            <p>ID: {product.id}</p>
             <img
-              src={products.image}
-              alt={products.title}
+              src={product.image}
+              alt={product.title}
               width='auto'
-              height='100'
+              height='60'
               loading='lazy'
             />
-            <p>{products.title}</p>
-            <p>${products.price}</p>
+            <p>{product.title}</p>
           </div>
         ))}
       </section>
@@ -75,4 +80,4 @@ function Listas() {
   );
 }
 
-export default Listas;
+export default Lista;

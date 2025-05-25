@@ -1,0 +1,44 @@
+.inicio-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  background: linear-gradient(to right, #f9fafb, #e3eaf1);
+  padding: 20px;
+  text-align: center;
+}
+
+.inicio-contenido {
+  background-color: white;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+}
+
+.inicio-contenido h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.inicio-contenido p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+.inicio-contenido button {
+  background-color: #0f62fe;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.inicio-contenido button:hover {
+  background-color: #0353e9;
+}
